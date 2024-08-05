@@ -16,6 +16,7 @@
   "dependencies": {
     "ant-design-vue": "4.x",
     "vue": "^3.4.29",
+    "vue-router": "^4.4.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
