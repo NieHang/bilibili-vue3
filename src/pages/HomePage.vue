@@ -6,8 +6,7 @@
 </template>
 
 <script setup lang="ts">
-  const num = ref(1)
-  console.log(num.value)
+import { userHi } from '@/api/user.ts'
 </script>
 
 <style lang="stylus"></style>
