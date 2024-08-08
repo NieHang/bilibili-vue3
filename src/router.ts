@@ -1,22 +1,17 @@
-import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-import HomePage from './pages/HomePage.vue'
-import LoginPage from './pages/LoginPage.vue'
+const routes: any = []
 
-const routes = [
-  {
-    path: '/',
-    component: HomePage
-  },
-  {
-    path: '/login',
-    component: LoginPage
-  },
-  {
-    path: '/about',
-    component: () => import('./pages/AboutPage.vue')
+const modules = import.meta.glob('./pages/*.vue')
+
+Object.keys(modules).forEach((key) => {
+  const module = {
+    path: `/${key.split('/').pop()?.split('.')[0]}`,
+    component: modules[key]
   }
-]
+
+  routes.push(module)
+})
 
 const router = createRouter({
   routes,
