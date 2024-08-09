@@ -14,6 +14,7 @@ declare module 'vue' {
     MHeader: typeof import('./src/components/layout/m-header.vue')['default']
     MLayout: typeof import('./src/components/layout/m-layout.vue')['default']
     MSider: typeof import('./src/components/layout/m-sider.vue')['default']
+    PageHeader: typeof import('./src/components/page-header/page-header.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

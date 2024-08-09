@@ -13,7 +13,5 @@
   })
 </script>
 
-<style lang="stylus">
-.ant-layout-footer
-  text-align: center
+<style lang="scss">
 </style>

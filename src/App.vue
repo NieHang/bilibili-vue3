@@ -2,12 +2,7 @@
 </script>
 
 <template>
-  <m-layout>
-    <m-header :style="{ height: '50px'}">header</m-header>
-    <m-sider>sider</m-sider>
-    <m-content>content</m-content>
-    <m-footer>footer</m-footer>
-  </m-layout>
+  <router-view></router-view>
 </template>
 
 <style scoped>
