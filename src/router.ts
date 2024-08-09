@@ -1,17 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { routes } from 'vue-router/auto-routes'
 
-const routes: any = []
+// const routes: any = []
 
-const modules = import.meta.glob('./pages/*.vue')
+// const modules = import.meta.glob('./pages/*.vue')
 
-Object.keys(modules).forEach((key) => {
-  const module = {
-    path: `/${key.split('/').pop()?.split('.')[0]}`,
-    component: modules[key]
-  }
+// Object.keys(modules).forEach((key) => {
+//   const module = {
+//     path: `/${key.split('/').pop()?.split('.')[0]}`,
+//     component: modules[key]
+//   }
 
-  routes.push(module)
-})
+//   routes.push(module)
+// })
 
 const router = createRouter({
   routes,
