@@ -8,6 +8,15 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AButton: typeof import('ant-design-vue/es')['Button']
+    ACard: typeof import('ant-design-vue/es')['Card']
+    ACardMeta: typeof import('ant-design-vue/es')['CardMeta']
+    ACarousel: typeof import('ant-design-vue/es')['Carousel']
+    ACol: typeof import('ant-design-vue/es')['Col']
+    ALayout: typeof import('ant-design-vue/es')['Layout']
+    ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
+    ALayoutFooter: typeof import('ant-design-vue/es')['LayoutFooter']
+    ALayoutHeader: typeof import('ant-design-vue/es')['LayoutHeader']
+    ARow: typeof import('ant-design-vue/es')['Row']
     MButton: typeof import('./src/components/button/m-button.vue')['default']
     MContent: typeof import('./src/components/layout/m-content.vue')['default']
     MFooter: typeof import('./src/components/layout/m-footer.vue')['default']
