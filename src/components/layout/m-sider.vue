@@ -5,13 +5,13 @@
 </template>
 
 <script lang="ts" setup>
-  defineOptions({
-    name: 'm-sider'
-  })
-  interface SiderProps {
-    width?: string
-  }
-  const props = withDefaults(defineProps<SiderProps>(), {
-    width: '200px'
-  })
+defineOptions({
+  name: 'm-sider'
+})
+interface SiderProps {
+  width?: string
+}
+const { width } = withDefaults(defineProps<SiderProps>(), {
+  width: '200px'
+})
 </script>

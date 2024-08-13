@@ -5,12 +5,12 @@
 </template>
 
 <script lang="ts" setup>
-  interface FooterProps {
-    height?: string
-  }
-  const props = withDefaults(defineProps<FooterProps>(), {
-    height: '60px'
-  })
+interface FooterProps {
+  height?: string
+}
+const { height } = withDefaults(defineProps<FooterProps>(), {
+  height: '60px'
+})
 </script>
 
 <style lang="scss">
