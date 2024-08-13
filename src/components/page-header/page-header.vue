@@ -3,7 +3,8 @@
     <div class="bili-header-bar">
       <div class="left-entry">
         <div v-for="link in links" :key="link.name">
-          <a :href="link.url" class="entry-title">{{ link.name }}</a>
+          <a v-if="link?.url" :href="link?.url">{{ link.name }}</a>
+          <div v-else>{{ link.name }}</div>
         </div>
       </div>
       <div class="right-entry">
@@ -19,6 +20,7 @@
     <div class="bili-header-logo">
       <img class="logo" src="../../assets/header-logo.png" alt="bili bili">
     </div>
+    <m-login></m-login>
   </div>
 </template>
 
@@ -34,8 +36,9 @@ const links = ref([
 ])
 
 const rightLinks = ref([
+  {name: 'Login'},
   {name: 'Creation', url: ''},
-  {name: 'Sign out', url: ''},
+  {name: 'Watch Later', url: ''},
 ])
 </script>
 
@@ -59,7 +62,7 @@ const rightLinks = ref([
     height: 64px;
     z-index: 1;
 
-    a {
+    a, div {
       color: #fff;
       text-decoration: none;
     }
